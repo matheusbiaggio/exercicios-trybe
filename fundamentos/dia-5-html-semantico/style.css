@@ -8,6 +8,7 @@ h1 {
     height: 50px;
     text-align: center;
     width: 200px;
+    margin-left: 650px;
   }
 
   .second {
@@ -24,4 +25,16 @@ h1 {
     height: 50px;
     text-align: center;
     width: 300px;
+  }
+
+  .secondThird {
+    margin-left: 450px;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .awards {
+    text-align: center;
   }
