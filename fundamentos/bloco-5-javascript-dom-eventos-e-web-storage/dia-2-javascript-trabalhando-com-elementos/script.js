@@ -1,10 +1,13 @@
 //Exercicio 1
-let container = document.getElementById('aqui');
+//Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body;
+let container = document.getElementsByTagName('body');
 let textH1 = document.createElement('h1');
 textH1.innerText = 'Exercício 5.2 - JavaScript DOM';
 textH1.className = 'title';
-container.appendChild(textH1);
-console.log(textH1);
+container[0].appendChild(textH1);
+
+//Exercicio 2
+//Adicione a tag main com a classe main-content como filho da tag body
 
 
 // 1 - Onde eu quero adicionar esse elemento?
