@@ -37,7 +37,6 @@ window.onload = function () {
         holidayButton.innerHTML = 'Feriados';
         holidayButton.setAttribute('id', 'btn-holiday');
         divButton.appendChild(holidayButton);
-        console.log(holiday);
 
         holidayButton.addEventListener('click', function() {
             if(cont % 2 != 0){
@@ -54,6 +53,31 @@ window.onload = function () {
         })
     }
 
+    function showFridays() {
+        let cont = 1;
+        let friday = document.getElementsByClassName('friday');
+        let fridayButton = document.createElement('button');
+        let divButton = document.getElementsByClassName('buttons-container')[0];
+        fridayButton.innerHTML = 'Sexta-feiras';
+        fridayButton.setAttribute('id', 'btn-friday');
+        divButton.appendChild(fridayButton);
+
+        fridayButton.addEventListener('click', function() {
+            if(cont % 2 != 0){
+                for (let i = 0; i < friday.length; i += 1){
+                    friday[i].style.backgroundColor = "green";
+                }
+            }
+            else{
+                for (let i = 0; i < friday.length; i += 1){
+                    friday[i].style.backgroundColor = "rgb(238,238,238)";
+                }
+            }
+            cont += 1;
+        })
+    }
+
     createDaysOfTheWeek();
     showHolidays();
+    showFridays();
 }
