@@ -90,6 +90,28 @@ window.onload = function () {
         }
     }
 
+    function addTask(nameTask) {
+        let tasks = document.getElementsByClassName('my-tasks')[0];
+       
+        if(nameTask.value) {
+            let ulTask = document.querySelector('.my-tasks > ul');
+            if (ulTask === null){
+                ulTask = tasks.appendChild(document.createElement('ul'));
+            }
+            let liTask = document.createElement('li');
+            liTask.innerText = nameTask.value;
+            ulTask.appendChild(liTask);
+        } else {
+            alert('Campo vazio');
+        }
+    }
+
+    let nameTask = document.getElementById('task-input');
+
+    document.getElementById('btn-add').addEventListener('click', function() {
+        addTask(nameTask);
+    })
+
     createDaysOfTheWeek();
     showHolidays();
     showFridays();
