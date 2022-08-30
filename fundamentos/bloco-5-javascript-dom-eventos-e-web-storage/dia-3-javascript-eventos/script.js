@@ -1,7 +1,8 @@
+let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+
 function createDaysOfTheWeek() {
     const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
     const weekDaysList = document.querySelector('.week-days');
-    let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
     for (let index = 0; index < weekDays.length; index += 1) {
         const days = weekDays[index];
@@ -15,7 +16,7 @@ function createDaysOfTheWeek() {
         let daysNumber = decemberDaysList[index];
         const dayListItemNumber = document.createElement('li');
         dayListItemNumber.innerHTML = daysNumber;
-        dayListItemNumber.className = 'day';
+        dayListItemNumber.className = 'day ';
         if (daysNumber == 24 || daysNumber == 31) {
             dayListItemNumber.className = 'day ' + 'holiday';
         } else if (daysNumber == 4 || daysNumber == 11 || daysNumber == 18) {
@@ -77,7 +78,20 @@ window.onload = function () {
         })
     }
 
+    function growUpText() {
+        let day = document.getElementsByClassName('day');
+        for(let i = 0; i < day.length; i += 1) {
+            day[i].addEventListener('mouseenter', function() {
+                day[i].style.fontSize = "60px";
+            })
+            day[i].addEventListener('mouseout', function() {
+                day[i].style.fontSize = "20px";
+            })
+        }
+    }
+
     createDaysOfTheWeek();
     showHolidays();
     showFridays();
+    growUpText();
 }
