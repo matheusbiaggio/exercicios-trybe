@@ -39,14 +39,14 @@ window.onload = function () {
         holidayButton.setAttribute('id', 'btn-holiday');
         divButton.appendChild(holidayButton);
 
-        holidayButton.addEventListener('click', function() {
-            if(cont % 2 != 0){
-                for (let i = 0; i < holiday.length; i += 1){
+        holidayButton.addEventListener('click', function () {
+            if (cont % 2 != 0) {
+                for (let i = 0; i < holiday.length; i += 1) {
                     holiday[i].style.backgroundColor = "green";
                 }
             }
-            else{
-                for (let i = 0; i < holiday.length; i += 1){
+            else {
+                for (let i = 0; i < holiday.length; i += 1) {
                     holiday[i].style.backgroundColor = "rgb(238,238,238)";
                 }
             }
@@ -63,14 +63,14 @@ window.onload = function () {
         fridayButton.setAttribute('id', 'btn-friday');
         divButton.appendChild(fridayButton);
 
-        fridayButton.addEventListener('click', function() {
-            if(cont % 2 != 0){
-                for (let i = 0; i < friday.length; i += 1){
+        fridayButton.addEventListener('click', function () {
+            if (cont % 2 != 0) {
+                for (let i = 0; i < friday.length; i += 1) {
                     friday[i].style.backgroundColor = "green";
                 }
             }
-            else{
-                for (let i = 0; i < friday.length; i += 1){
+            else {
+                for (let i = 0; i < friday.length; i += 1) {
                     friday[i].style.backgroundColor = "rgb(238,238,238)";
                 }
             }
@@ -80,15 +80,37 @@ window.onload = function () {
 
     function growUpText() {
         let day = document.getElementsByClassName('day');
-        for(let i = 0; i < day.length; i += 1) {
-            day[i].addEventListener('mouseenter', function() {
+        for (let i = 0; i < day.length; i += 1) {
+            day[i].addEventListener('mouseenter', function () {
                 day[i].style.fontSize = "60px";
             })
-            day[i].addEventListener('mouseout', function() {
+            day[i].addEventListener('mouseout', function () {
                 day[i].style.fontSize = "20px";
             })
         }
     }
+
+    function addTask(nameTask) {
+        let tasks = document.getElementsByClassName('my-tasks')[0];
+
+        if (nameTask.value) {
+            let ulTask = document.querySelector('.my-tasks > ul');
+            if (ulTask === null) {
+                ulTask = tasks.appendChild(document.createElement('ul'));
+            }
+            let liTask = document.createElement('li');
+            liTask.innerHTML = '<span>' + nameTask.value + '</span>';
+            ulTask.appendChild(liTask);
+        } else {
+            alert('Campo vazio');
+        }
+    }
+
+    let nameTask = document.getElementById('task-input');
+
+    document.getElementById('btn-add').addEventListener('click', function () {
+        addTask(nameTask);
+    })
 
     createDaysOfTheWeek();
     showHolidays();
