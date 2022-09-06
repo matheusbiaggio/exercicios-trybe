@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  text-align: center;
+  margin: 3% 0 3%;
+}
+
+form {
+  padding: 2%;
+  margin-top: 15px;
+  line-height: 2;
+  background-color: bisque;
+  border: solid 1px black;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#divPreferredDestination label {
+  margin-left: 3%;
+}
+
+#divButton {
+  padding: 2%;
+  text-align: center;
+}
+
+button, #buttonClearReset {
+  width: 100px;
+  height: 30px;
+}

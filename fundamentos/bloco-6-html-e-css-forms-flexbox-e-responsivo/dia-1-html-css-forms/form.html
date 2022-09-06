@@ -1,12 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TrybeTrip</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>TrybeTrip</h1>
+    </header>
+    <form action="">
+        <div id="divInputName">
+            <label for="name">Nome completo:
+                <input type="text" name="name" id="name" placeholder="Digite o seu nome completo" required>
+            </label>
+        </div>
+        <div id="divInputEmail">
+            <label for="email">Email:
+                <input type="email" name="input" id="inputEmail" placeholder="Digite o seu email" required>
+            </label>
+        </div>
+        <div id="divPreferredDestination">
+            <p>Escolha uma opção de destino ofertadas</p>
+            <label for="destination1">
+                <input type="radio" id="destination1" name="preferredDestination">  Florianópolis
+            </label>
+            <label for="destination2">
+                <input type="radio" id="destination2" name="preferredDestination">  Balneário Camburiú
+            </label>
+            <label for="destination3">
+                <input type="radio" id="destination3" name="preferredDestination">  Gramado
+            </label>
+            <label for="destination4">
+                <input type="radio" id="destination4" name="preferredDestination">  Campos do Jordão
+            </label>
+        </div>
+        <div id="divTextArea">
+            <p>Escreva o porque você deveria ganhar</p>
+            <textarea name="textWinner" id="textWinner"></textarea required>
+        </div>
+        <div id="divDate">
+            <label for="travelDate">Melhor data para a viagem:
+                <input type="date" name="travelDate" id="travelDate" required>
+            </label>
+        </div>
+        <div id="questionAgree">
+            <label for="agreeReceivedEmail">
+                <input type="checkbox" name="agreeReceivedEmail" id="agreeReceivedEmail">  Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            </label>
+            <br>
+            <label for="agreeImage">
+                <input type="checkbox" name="agreeImage" id="agreeImage">  Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            </label>
+        </div>
+    </form>
+    <div id="divButton">
+        <button type="submit" id="buttonSubmit">Enviar</button>
+        <button id="buttonClear">Limpar</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
