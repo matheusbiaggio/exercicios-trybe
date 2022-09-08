@@ -1,0 +1,19 @@
+form {
+  padding: 4%;
+  background-color: antiquewhite;
+  border-radius: 3%;
+}
+
+#divInputName, #divInputEmail, #divPreferredDestination, #divTextArea, #divDate, #questionAgree {
+  padding: 1%;
+}
+
+header {
+  text-align: center;
+  margin-top: 3%;
+}
+
+#divButton {
+  margin-top: 3%;
+  text-align: center;
+}
