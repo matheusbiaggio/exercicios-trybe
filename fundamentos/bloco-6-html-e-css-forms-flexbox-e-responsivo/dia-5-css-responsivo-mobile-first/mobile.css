@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 3%;
+}
+
+body p {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  padding: 3% 0 3% 0;
+}
+
+h2 {
+  margin: 3% 0 3% 3%;
+}
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+figure {
+  display: flex;
+  margin-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
