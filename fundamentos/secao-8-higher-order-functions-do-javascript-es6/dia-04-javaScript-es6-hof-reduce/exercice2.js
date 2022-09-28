@@ -91,4 +91,3 @@ function longestNamedBook(books) {
   return longestName = books.reduce((longest, nameBook) => longest.name.length > nameBook.name.length ? longest : nameBook, books[0]);
 }
 
-console.log(longestNamedBook(books));
