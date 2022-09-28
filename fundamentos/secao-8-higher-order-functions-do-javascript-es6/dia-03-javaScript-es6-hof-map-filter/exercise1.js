@@ -67,18 +67,21 @@ const books = [
 const bookDescription = books.map((description) => `${description.name} - ${description.genre} - ${description.author.name}`);
 
 // Retorna um objeto com o nome do autor e a sua idade quando tinha ao lançar o livro na ordem crescente 
-//const sortBooksByAge = books.map((sortBooks) => sortBooks.author);
-//console.log(sortBooksByAge);
-
-//console.log(books.map((age) => `${age.releaseYear - age.author.birthYear}`));
-console.log(books.map(({ releaseYear, author}) => ({ [releaseYear]: author })));
+// function nome() {
+//   const sortBooksByAge = books.map((book) => {
+//     const auxObj = {};
+//     auxObj.age = book.releaseYear - book.author.birthYear
+//   })
+//   return auxObj;  
+// }
+// console.log(nome());
 
 // console.log(sortBooksByAge(books));
 
 
 
 
-// const sortBooksByAge = books.map((sortBooks) => 
-//   ({age: `${sortBooks.releaseYear - sortBooks.author.birthYear}`, author: sortBooks.author.name}.sort((a,b) => b.age - a.age))
-// [`${sortBooks.releaseYear - sortBooks.author.birthYear}`, sortBooks.author.name]
-// .sort((a,b) => b.age - a.age));
+const sortBooksByAge = books.map((sortBooks) => ({age: sortBooks.releaseYear - sortBooks.author.birthYear, author: sortBooks.author.name}))
+.sort((a, b) => a.age - b.age);
+
+console.log(sortBooksByAge);
